@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 module.exports = () => {
 //mongodb 연결
-mongoose.connect('mongodb://localhost/~~~', {
+mongoose.connect('mongodb://localhost/test', {
     useNewUrlParser: true
 }, (err) => {
     if (err) {

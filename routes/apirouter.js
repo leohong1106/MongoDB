@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Users = require('../schemas/user');
-var Comments = require('../schemas/comment');
+// var Comments = require('../schemas/comment');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -81,12 +81,12 @@ router.get('/comments/:id', function (req, res, next) {
     //     next(err);
     // });
 
-    Comments.find({ commenter: req.params.id   }).populate('commenter').exec((err, results) => {
-      if(err) console.log(err);
-      else {
-        console.log(results);
-        res.json(results);
-      }
-    })
+    // Comments.find({ commenter: req.params.id   }).populate('commenter').exec((err, results) => {
+    //   if(err) console.log(err);
+    //   else {
+    //     console.log(results);
+    //     res.json(results);
+    //   }
+    // })
    
 });
